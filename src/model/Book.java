@@ -25,4 +25,12 @@ public class Book {
 
     public void borrow() { this.isBorrowed = true; }
     public void returnBook() { this.isBorrowed = false; }
+
+    public boolean isAvailable() {
+        return true ;}
+
+
+    public void setAvailable(boolean b) {
+
+    }
 }

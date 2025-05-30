@@ -165,7 +165,12 @@ public class Main {
     private static void createUser() {
         System.out.print("Kullanıcı adı: ");
         String name = scanner.nextLine();
-        User user = new User(UUID.randomUUID().toString(), name);
+        User user = new User(UUID.randomUUID().toString(), name) {
+            @Override
+            public void returnBook(Book book) {
+
+            }
+        };
         userService.addUser(user);
         System.out.println("Kullanıcı oluşturuldu. ID: " + user.getId());
     }

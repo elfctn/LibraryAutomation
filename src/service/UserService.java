@@ -69,7 +69,7 @@ public class UserService {
 
     public List<Book> listBorrowedBooks(String userId) {
         User user = findUserById(userId);
-        return user != null ? user.getBorrowedBooks() : new ArrayList<>();
+        return user != null ? (List<Book>) user.getBorrowedBooks() : new ArrayList<>();
     }
 
     public List<Invoice> getUserInvoices(String userId) {
