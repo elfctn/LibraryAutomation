@@ -11,7 +11,7 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
 
 ### Library System
 
- * ![](challenge1.png)
+ * ![](../../../Downloads/challenge1.png)
  * Bir kütüphane sistemi modelimiz mevcut.
  * Bu modeli programlamak istiyoruz. Nesne Tabanlı bir uygulama geliştirmek zorundayız.
  * Tamamen özgür bir şekilde istediğiniz türde bir dizayn yapabilirsiniz.
