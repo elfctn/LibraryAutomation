@@ -59,7 +59,7 @@ public class Main {
     }
 
     private static void addBook() {
-        System.out.print("Kitap adı: ");
+        System.out.print("Kitap ID/Adı: ");
         String title = scanner.nextLine();
         System.out.print("Yazar adı: ");
         String authorName = scanner.nextLine();
