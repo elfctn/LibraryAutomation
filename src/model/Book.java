@@ -1,9 +1,6 @@
 package model;
 
-//Composition + Interface ekle
-
-
-public class Book {
+public class Book implements Borrowable {
     private String id;
     private String title;
     private Author author;
@@ -23,14 +20,27 @@ public class Book {
     public Category getCategory() { return category; }
     public boolean isBorrowed() { return isBorrowed; }
 
+    @Override
     public void borrow() { this.isBorrowed = true; }
+
+    @Override
     public void returnBook() { this.isBorrowed = false; }
 
+    @Override
     public boolean isAvailable() {
-        return true ;}
+        return !isBorrowed;
+    }
 
+    public void setAvailable(boolean available) {
+        this.isBorrowed = !available;
+    }
 
-    public void setAvailable(boolean b) {
-
+    @Override
+    public String toString() {
+        return "Kitap [id=" + id
+                + ", başlık=" + title
+                + ", yazar=" + author
+                + ", kategori=" + category
+                + ", ödünçDurumu=" + (isBorrowed ? "Ödünç Alındı" : "Mevcut") + "]";
     }
 }
